@@ -10,9 +10,9 @@
 		<br/>
 		<h3>Input for Encrypt/Decrypt</h3>
 		<form method="POST" action="">	
-			<input type="text" name="plaintext" placeholder="plain text">
-			<input type="number" max="10" name="n1" placeholder="jumlah pertama">
-			<input type="number" max="10" name="n2" placeholder="jumlah kedua">
+			<input type="text" name="plaintext" placeholder="plain text" required>
+			<input type="number" max="10" name="n1" placeholder="jumlah pertama" required>
+			<input type="number" max="10" name="n2" placeholder="jumlah kedua" required>
 			<input type="submit" name="btn_encrypt" value="encrypt">
 			<input type="submit" name="btn_decrypt" value="decrypt">
 		</form>
