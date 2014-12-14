@@ -22,12 +22,13 @@
 	</html>
 	<?php
 if(!empty($_POST)){ //if do action
+	$plus = $_POST['n1']+1+$_POST['n2'];
+	$string = $_POST['plaintext'];
+	$newstring = $_POST['plaintext'];
 	if(isset($_POST['btn_encrypt'])) {//jika melakukan encrypt
-		$string = $_POST['plaintext'];
-		$newstring = $_POST['plaintext'];
-
 		for ($i=0;$i<strlen($string);$i++) {
 			$ascii = ord($string[$i]);
+			$ascii = $ascii + $plus;
 	    if($ascii == 90) { //uppercase bound
 	        $ascii = 65; //reset back to 'A' 
 	    } 
@@ -39,12 +40,11 @@ if(!empty($_POST)){ //if do action
 	    }
 	    $newstring[$i] = chr($ascii);
 		} 
-	}else if(isset($_POST['btn_encrypt'])) { //jika melakukan decrypt
-		$string = $_POST['plaintext'];
-		$newstring = $_POST['plaintext'];
+	}else if(isset($_POST['btn_decrypt'])) { //jika melakukan decrypt
 
 		for ($i=0;$i<strlen($string);$i++) {
 			$ascii = ord($string[$i]);
+			$ascii = $ascii - ($plus+2);
 	    if($ascii == 90) { //uppercase bound
 	        $ascii = 65; //reset back to 'A' 
 	    } 
