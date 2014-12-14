@@ -62,10 +62,12 @@ echo '<p><strong>Plaintext : </strong>'.$_POST['plaintext'].'</p>';
 echo '<p><strong>angka pertama : </strong>'.$_POST['n1'].'</p>';
 echo '<p><strong>angka kedua : </strong>'.$_POST['n2'].'</p>';
 echo '</div><br/>';
+?>
+<span style="font-size:40px;padding:5px;background-color:#F4F4F4"><?php echo $newstring;?></span>
+<?php
 }
 
 ?>
-<span style="font-size:40px;padding:5px;background-color:#F4F4F4"><?php echo $newstring;?></span>
 <br/>
 <br/>
 <small style="color:gray">copyright &copy; 2015 ToniStark</small>
